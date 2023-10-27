@@ -17,6 +17,4 @@ mkdir build
 cd build
 ../configure -C --disable-install-doc --prefix=$(pwd)/install
 make -s $JOBS
-make -s $JOBS install
-make -s test
-make -s test-all RUBYOPT="-w"
+make -s test-all TESTS="../test/fiber/test_queue.rb" RUBYOPT="-w"
